@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{margin: 0; padding: 0;}
+        ul{list-style: none;}
+        img{border: 0; vertical-align: top;}
+
+        header{
+            width: 1000px; height: 50px;
+            margin: 0 auto;
+            background-color: rgb(221, 182, 182);
+        }
+        .gnb{
+            width: 90%;
+            margin: 0 auto;
+            display: flex;
+            line-height: 50px;
+            justify-content: space-between;
+            box-sizing: border-box;
+        }
+        .gnb .gnb-logo{
+            font-weight: 700;
+            font-size: 1.2rem;
+        }
+        .gnb .gnb-main{
+            display: flex;
+            gap: 10px;
+        }
+        .gnb .gnb-main>li{
+            font-size: 1.2rem;
+            color: gray;
+        }
+
+
+        main{
+            width: 1000px;
+            margin: 0 auto;
+            background-color: #e7e5e5;
+            margin-bottom: 80px;
+            padding-bottom: 50px;
+        }
+        .main-coffee{
+            width: 90%; margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+        }
+        .main-coffee .main-title{
+            margin-top: 90px;
+        }
+        .main-coffee .main-title p{
+            margin: 10px 0 25px 0;
+        }
+        .main-coffee .main-btn{
+            width: 80px; height: 30px;
+            background-color: rgb(207, 92, 4);
+            border-radius: 5px;
+            color: #fff;
+            text-align: center;
+            line-height: 30px;
+        }
+        .main-coffee .main-img img{
+            width: 100%; height: 200px;
+            margin-top: 60px;
+            border-radius: 10px;
+        }
+
+
+
+
+
+
+
+        .why{
+            width: 90%; margin: 50px auto;
+            margin-bottom: 50px;
+        }
+        .why h3{
+            margin-bottom: 10px;
+        }
+        .why .why-list{
+            display: flex;
+            gap: 20px;
+        }
+        .why .why-list>li{
+            position: relative;
+            width: calc((100% - 300px) / 3);
+            flex: 1;
+        }
+        .why .why-list li img{
+            width: 100%; height: 180px;
+            border-radius: 10px;
+        }
+        .why .why-list li:nth-child(1) p,
+        .why .why-list li:nth-child(2) p,
+        .why .why-list li:nth-child(3) p{
+            width: 100%; height: 50px;
+            background-color: rgba(0, 255, 255, 0.36);
+            text-align: center;
+            line-height: 50px;
+            color: #fff;
+            position: absolute;
+            left: 0; top: 50%;
+            transform: translateY(-50%);
+        }
+        
+
+
+
+        .meun{
+            width: 90%; margin: 50px auto;
+            margin-bottom: 50px;
+        }
+        .meun h3{
+            margin-bottom: 10px;
+        }
+
+        .menu-list-box{
+            width: calc(100% + 40px);
+            margin-left: -20px;
+            padding: 20px;
+            box-sizing: border-box;
+            background-color: antiquewhite;
+        }
+        .meun .menu-list{
+            display: flex;
+            gap: 20px;
+        }
+        .meun .menu-list>li{
+            position: relative;
+            width: calc((100% - 300px) / 3);
+            flex: 1;
+        }
+        .meun .menu-list li img{
+            width: 100%; height: 180px;
+            border-radius: 10px;
+            object-fit: cover;
+        }
+        .meun .menu-list li:nth-child(1) p,
+        .meun .menu-list li:nth-child(2) p,
+        .meun .menu-list li:nth-child(3) p{
+            width: 120px; height: 30px;
+            background-color: #fff;
+            border-radius: 30px 30px 0 0;
+            text-align: center;
+            line-height: 30px;
+            color: #4e4c4c;
+            position: absolute;
+            left: 50%;
+            bottom: 0;
+            transform: translateX(-50%);
+        }
+        
+
+
+
+
+        footer{
+            width: 100%;
+            background-color: #222;
+            padding: 50px 0;
+        }
+
+        .foot{
+            width: 80%;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .foot p,
+        .foot p:nth-child(3){    
+            margin-bottom: 10px;
+            font-size: 1rem;
+            color: #999;
+        }
+
+        .foot p:nth-child(1){
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+            color: #fff;
+        }
+
+        @media (max-width: 1000px){
+            header,
+            main{
+                width: 100%;
+            }
+        }
+        @media (max-width: 768px){
+        header{width: 100%;}
+        header .gnb-main>li{
+            display: none;
+        }
+        main{width: 100%;}
+        .gnb{
+            padding: 0 30px;
+        }
+        .main-coffee{
+            width: 85%;
+            display: block;
+        }
+        .main-coffee .main-title{
+            padding-top: 50px;
+            margin-top: 0;
+            text-align: center;
+        }
+        .main-coffee .main-img img{
+            width: 100%;
+            height: 200px;
+            margin-top: 30px;
+            object-fit: cover;
+        }
+        .main-coffee .main-title .main-btn{
+            margin: 0 auto;
+        }
+
+
+        .why{
+            width: 85%;
+        }
+
+        .why .why-list{
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+        }
+
+        .why .why-list li{
+            width: 100%;
+        }
+
+        .why .why-list li img{
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+        }
+
+
+        .meun{
+            width: 85%;
+        }
+
+        .meun .menu-list{
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+        }
+
+        .meun .menu-list li{
+            width: 100%;
+        }
+
+        .meun .menu-list li img{
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+        }
+
+        footer{
+            width: 100%;
+        }
+        
+    }
+    </style>
+
+</head>
+<body>
+    <header>
+        <div class="gnb">
+            <p class="gnb-logo">
+                BREW & CO
+            </p>
+            <ul class="gnb-main">
+                <li>메뉴</li>
+                <li>소개</li>
+                <li>문의</li>
+            </ul>
+        </div>
+    </header>
+
+    <main>
+        <div class="main-coffee">
+            <div class="main-title">
+                <h2>
+                    커피 한 잔의 여유
+                </h2>
+                <p>
+                    바쁜 도시의 흐름 속에서<br>
+                    일상이 잠시 휴가처럼 느껴지는 순간,<br>
+                    도심 속 작은 쉼표를 전합니다<br>
+                </p>
+                <p class="main-btn">
+                    메뉴 보기
+                </p>
+            </div>
+            <div class="main-img">
+                <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fGNvZmZlZXxlbnwwfHwwfHx8MA%3D%3D" alt="메인커피">
+            </div>
+        </div>
+
+        <div class="why">
+            <h3>왜 우리인가?</h3>
+
+            <ul class="why-list">
+                <li>
+                    <img src="https://images.unsplash.com/photo-1447933601403-0c6688de566e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8Y29mZmVlfGVufDB8fDB8fHww" alt="스폐셜티원두">
+                    <p>스폐셜티 원두</p>
+                </li>
+                <li>
+                    <img src="https://images.unsplash.com/photo-1515823662972-da6a2e4d3002?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjQxfHxjb2ZmZWV8ZW58MHx8MHx8fDA%3D" alt="매일 베이커리">
+                    <p>매일 베이커리</p>
+                </li>
+                <li>
+                    <img src="https://images.unsplash.com/photo-1500353391678-d7b57979d6d2?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTgyfHxjb2ZmZWV8ZW58MHx8MHx8fDA%3D" alt="편안한 공간">
+                    <p>편안한 공간</p>
+                </li>
+            </ul>
+        </div>
+
+        <div class="meun">
+            <h3>
+                인기 메뉴
+            </h3>
+            <div class="menu-list-box">
+                <ul class="menu-list">
+                    <li>
+                        <img src="https://plus.unsplash.com/premium_photo-1670469009826-db07ab733925?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NTZ8fGNvZmZlZXxlbnwwfHwwfHx8MA%3D%3D" alt="아메리카노">
+                        <p>아메리카노</p>
+                    </li>
+                    <li>
+                        <img src="https://images.unsplash.com/photo-1517701550927-30cf4ba1dba5?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NzZ8fGNvZmZlZXxlbnwwfHwwfHx8MA%3D%3D" alt="카페라떼">
+                        <p>카페라떼</p>
+                    </li>
+                    <li>
+                        <img src="https://images.unsplash.com/photo-1594075731547-8c705bb69e50?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NzN8fGNvZmZlZXxlbnwwfHwwfHx8MA%3D%3D" alt="콜드브루">
+                        <p>콜드브루</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+
+
+    </main>
+    <footer>
+        <div class="foot">
+            <p>BREW & CO</p>
+            <p>서울 마포구 연남동</p>
+            <p>©2026 All Rights Reserved</p>
+        </div>
+    </footer>
+</body>
+</html>
